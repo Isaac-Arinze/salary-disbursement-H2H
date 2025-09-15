@@ -1,0 +1,9 @@
+companyName,batchId,companyAccount,salaryDate,generatedAt
+Oando,SAL20250821,1234567890,2025-08-21,2025-08-21T10:30:00
+
+employeeId,name,accountNumber,bankCode,amount
+EMP001,John Doe,1111222233,001,500000
+EMP002,Jane Smith,4444555566,002,450000
+EMP003,Mike Johnson,7777888899,001,600000
+EMP004,Sarah Wilson,3333444455,003,550000
+EMP005,David Brown,9999000011,002,480000

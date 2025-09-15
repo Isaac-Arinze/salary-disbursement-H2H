@@ -1,0 +1,9 @@
+com\zikan\salary\model\SalaryRequest.class
+com\zikan\salary\SalaryDisbursementApplication.class
+com\zikan\salary\model\Employee.class
+com\zikan\salary\controller\SalaryController.class
+com\zikan\salary\repository\SalaryRepository.class
+com\zikan\salary\service\SalaryService.class
+com\zikan\salary\controller\EmployeeController.class
+com\zikan\salary\service\EmployeeService.class
+com\zikan\salary\repository\EmployeeRepository.class
