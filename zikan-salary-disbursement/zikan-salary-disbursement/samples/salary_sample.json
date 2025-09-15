@@ -1,0 +1,10 @@
+{
+  "salaryBatchId": "SAL20250821",
+  "companyName": "Zikan",
+  "companyAccount": "1234567890",
+  "salaryDate": "2025-08-21",
+  "employees": [
+    { "employeeId": "EMP001", "name": "John Doe", "accountNumber": "1111222233", "bankCode": "001", "amount": 500000 },
+    { "employeeId": "EMP002", "name": "Jane Smith", "accountNumber": "4444555566", "bankCode": "002", "amount": 450000 }
+  ]
+}

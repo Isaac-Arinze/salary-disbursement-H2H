@@ -1,32 +1,36 @@
 package com.zikan.salary.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
+
 import java.util.List;
-
-public class SalaryRequest {
+@Entity
+public class SalaryRequest{
+    @NotBlank
     private String salaryBatchId;
+
+    @NotBlank
     private String companyName;
+
+    @NotBlank
+    @Pattern(regexp = "^[A-Z]{6}[A-Z0-9]{10}$")
     private String companyAccount;
+
+    @NotBlank
+    @Pattern(regexp = "\\d{4}-\\d{2}-\\d{2}")
     private String salaryDate; // yyyy-MM-dd
-    private List<Employee> employees;
 
-    public static class Employee {
-        private String employeeId;
-        private String name;
-        private String accountNumber;
-        private String bankCode;
-        private long amount; // in minor units e.g. kobo/cent
+    @NotEmpty
+    @Valid
+//    private List<Employee> employees;
+    private Long string;
+    @Id
+    private Long id;
 
-        public String getEmployeeId() { return employeeId; }
-        public void setEmployeeId(String employeeId) { this.employeeId = employeeId; }
-        public String getName() { return name; }
-        public void setName(String name) { this.name = name; }
-        public String getAccountNumber() { return accountNumber; }
-        public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
-        public String getBankCode() { return bankCode; }
-        public void setBankCode(String bankCode) { this.bankCode = bankCode; }
-        public long getAmount() { return amount; }
-        public void setAmount(long amount) { this.amount = amount; }
-    }
 
     public String getSalaryBatchId() { return salaryBatchId; }
     public void setSalaryBatchId(String salaryBatchId) { this.salaryBatchId = salaryBatchId; }
@@ -36,6 +40,22 @@ public class SalaryRequest {
     public void setCompanyAccount(String companyAccount) { this.companyAccount = companyAccount; }
     public String getSalaryDate() { return salaryDate; }
     public void setSalaryDate(String salaryDate) { this.salaryDate = salaryDate; }
-    public List<Employee> getEmployees() { return employees; }
-    public void setEmployees(List<Employee> employees) { this.employees = employees; }
+//    public List<Employee> getEmployees() { return employees; }
+//    public void setEmployees(List<Employee> employees) { this.employees = employees; }
+
+    public void setString(Long string) {
+        this.string = string;
+    }
+
+    public Long getString() {
+        return string;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
